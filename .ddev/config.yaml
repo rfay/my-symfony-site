@@ -13,7 +13,7 @@ timezone: UTC
 composer_version: "2"
 web_environment: []
 corepack_enable: false
-webimage_extra_packages: ["php${DDEV_PHP_VERSION}-vips", "libvips"]
+webimage_extra_packages: ["php${DDEV_PHP_VERSION}-vips", "libvips", "libffi-dev"]
 hooks:
     post-start:
         - exec: symfony run --daemon --watch=config,src,templates,vendor bin/console messenger:consume async -vv
